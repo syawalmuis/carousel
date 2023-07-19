@@ -52,7 +52,7 @@ div:has(> .card-slider){
     
 }
 
-@media only screen and(max-width: 780px) {
+@media screen and (max-width: 780px) {
     .card-slider-item{
         width: 100%;
     }
