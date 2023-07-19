@@ -14,13 +14,13 @@ function cardSlider(self, isNext) {
 }
 
 card_slider.addEventListener("mousedown", dragStart);
-// card_slider.addEventListener("touchstart", dragStart);
+card_slider.addEventListener("touchstart", dragStart);
 
 card_slider.addEventListener("mousemove", dragging);
-// card_slider.addEventListener("touchmove", dragging);
+card_slider.addEventListener("touchmove", dragging);
 
 card_slider.addEventListener("mouseup", dragStop);
-// card_slider.addEventListener("touchend", dragStop);
+card_slider.addEventListener("touchend", dragStop);
 
 function dragging(e) {
   if (!isDragstart) return;
@@ -34,7 +34,7 @@ function dragging(e) {
 
 function dragStart(e) {
   isDragstart = true;
-  prevPageX = e.pageX;
+  prevPageX = e.pageX || e.touches[0].pageX;
   prevScrollLeft = card_slider.scrollLeft;
 }
 
