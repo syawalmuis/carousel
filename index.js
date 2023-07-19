@@ -36,6 +36,7 @@ function dragStart(e) {
   isDragstart = true;
   prevPageX = e.pageX || e.touches[0].pageX;
   prevScrollLeft = card_slider.scrollLeft;
+  alert("touch");
 }
 
 function dragStop() {
