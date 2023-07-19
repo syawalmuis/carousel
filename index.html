@@ -7,7 +7,12 @@
     <title>Imags Slider</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
+
   <body>
+    <h4 class="title">
+      Image random from
+      <a target="_blank" href="https://unsplash.com">Unsplash</a>
+    </h4>
     <div>
       <div class="card-slider">
         <div class="card-slider-item">
@@ -70,9 +75,9 @@
           <img src="https://source.unsplash.com/random/300×300/?pen" alt="" />
         </div>
       </div>
-      <button class="prev" onclick="cardSlider(this, false)">&#8249;</button>
-      <button class="next" onclick="cardSlider(this, true)">&#8250;</button>
+      <button class="prev" onclick="cardSlider(false)">&#8249;</button>
+      <button class="next" onclick="cardSlider(true)">&#8250;</button>
     </div>
-    <script src="index.js"></script>
+    <script src="./js/index.js" defer></script>
   </body>
 </html>

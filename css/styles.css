@@ -15,6 +15,13 @@ body {
     background-color: rgb(243, 243, 243);
 }
 
+.title {
+    margin-bottom: 1.6rem;
+    letter-spacing: 0.3px;
+    font-size: 2rem;
+    font-family: tahoma;
+}
+
 div:has(> .card-slider){
     width: 90%;
     position: relative;
@@ -31,7 +38,7 @@ div:has(> .card-slider){
     display: inline-block;
     width: 100%;
     overflow: hidden;
-    scroll-snap-type: x mandatory;
+    /* scroll-snap-type: x mandatory; */
     white-space: nowrap;
     background-color: black;
     margin: 0px;
@@ -54,10 +61,13 @@ div:has(> .card-slider){
 
 @media screen and (max-width: 780px) {
     .card-slider-item{
-        width: 100%;
+        width: calc(100% / 2);
+    }
+    div:has(>.card-slider) :is(.next, .prev){
+        height: 1.5rem !important;
+        width: 1.5rem !important;
     }
 }
-
 .card-slider-item img {
     height:200px;
     width: 100%;
@@ -97,7 +107,7 @@ div:has(>.card-slider) .prev{
     left: -15px;
     box-shadow: -2px 2px 5px rgb(197, 188, 188);
     padding-right: 3px;
-    /* display: none; */
+    display: none;
 }
 div:has(>.card-slider) .next{
     right: -15px;
